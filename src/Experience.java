@@ -1,2 +1,4 @@
-package PACKAGE_NAME;public interface Experience {
+public interface Experience {
+    public void aboutExperience();
+
 }

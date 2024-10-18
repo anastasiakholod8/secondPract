@@ -1,23 +1,26 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Order {
+public class Customer {
+    private String name;
+    private List<Menu> order;
 
-    private List<String> orderedDishes;
-
-
-
-    public void orderDishes(String dish, Menu menu) {
-        if (menu.getDishes().contains(dish)) {
-            orderedDishes.add(dish);
-            System.out.println( " Замовник замовив:" + dish);
-
-        } else {
-            System.out.println(dish + "немає в меню");
-        }
+    public Customer(String name) {
+        this.name = name;
+        this.order = new ArrayList<>();
     }
-        public void showOrders(){
-            System.out.println( "Замовник замовив:"+orderedDishes);
-        }
+
+    public void addToOrder(Menu menuItem) {
+        order.add(menuItem);
     }
+
+    public List<Menu> getOrder() {
+        return order;
+    }
+
+    @Override
+    public String toString() {
+        return "Замовник: " + name + ", Замовлення: " + order;
+    }
+}
 
