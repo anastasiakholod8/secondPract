@@ -11,6 +11,7 @@ public class Customer {
     }
 
     public void addToOrder(Menu menuItem) {
+
         order.add(menuItem);
     }
 
